@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ezo!istn+*(8)gwu%3!5fc=f!+g5eb0okg%wf3=0&=qwqf!5@x'
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = {'*'}
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
