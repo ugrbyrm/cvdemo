@@ -1,0 +1,244 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GETTING STARTED WITH BRACKETS</title>
+    <style>
+        .navbar-collapse a {
+            text-align: right;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: cornflowerblue;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .rounded {
+            border-radius: 2.5rem !important;
+            text-shadow: 0 0 black;
+        }
+
+        .w3-lobster {
+            font-family: "Lobster", serif;
+        }
+
+        ol {
+            list-style-type: none;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+    <meta name="description" content="An interactive getting started guide for Brackets.">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" id="ugur">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <a class="navbar-brand" href="#ugur"><span style="background-color: skyblue;width: 40px;height: 60px;"><img
+                src="{% static "/blog/images/Emotion-plus-20-512.png" %}" class="navbar-icon rounded"
+                style="width:40px;height: 40px;pa"></span>
+            <button class="button" style="vertical-align:middle;pad"><span>Uğur Bayram </span></button>
+        </a>
+        <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarX'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' style="width: 100%" id='navbarX'>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#kb">Kişisel Bilgiler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#eb">Eğitim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#yb">Yetenek</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#yd">Yabancı diller</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row" style="padding-right:15px;padding-left:15px; ">
+        <div class="col-sm-4 bg-dark" style="">
+            <div style="width: 100%;padding-top: 40"><img class="rounded mx-auto d-block " style="padding: 20;border-radius: 2.5rem!important;
+                 text-shadow: 0 0 black;" src={% static '/blog/images/ugur.jpg' %} width="230" height="330"></div>
+            <div id="iletisim" style="padding-top: 20">
+                <h1 style="font-family: 'Roboto Slab', serif; font-size:30px; color:skyblue;padding-top: 10; padding-left: 10">
+                    İletişim Bilgileri:</h1>
+                <ul class="fa-ul">
+                    <li style="color: skyblue"><span class="fa-li"><i class="fas fa-phone-square-alt"
+                                                                      style="color: skyblue"></i></span>+905313163676
+                    </li>
+                    <li style="color: skyblue"><span class="fa-li"><i class="fas fa-map-marker-alt"
+                                                                      style="color: skyblue"></i></span> Cihangir
+                        mahallesi Ormanlı caddesi Fırat sokak No: 15 Avcılar/İstanbul/Türkiye
+                    </li>
+                    <li style="color:skyblue"><span class="fa-li"><i class="fas fa-envelope-open"
+                                                                     style="color: skyblue"></i></span><a
+                            style="color: skyblue" href="mailto:ugurbayram@ogr.iu.edu.tr" target="_top">ugurbayram@ogr.iu.edu.tr</a>
+                    </li>
+                    <li style="color: skyblue"><span class="fa-li"><i class="fab fa-linkedin"
+                                                                      style="color: skyblue"></i></span><a
+                            style="color: skyblue" href="https://www.linkedin.com/in/u%C4%9Fur-bayram/" target="_blank">https://www.linkedin.com/in/u%C4%9Fur-bayram/</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1 style="font-family: 'Roboto Slab', serif; font-size:30px; color:skyblue;padding-top: 50; padding-left: 10">
+                    Sertifika Bilgileri :</h1>
+                <ul class="fa-ul">
+                    <li style="color: skyblue;padding-top: 10"><span class="fa-li"><i class="fad fa-file-alt"
+                                                                                      style="color: skyblue;padding-top: 10"></i></span>Boğaziçi
+                        üniversitesi 2019 yaz kampı Siber güvenlik - uygulamalı sızma eğitimi - Siber kümelenme
+                        sertifikası
+                    </li>
+                    <li style="color: skyblue;padding-top: 10"><span class="fa-li"><i class="fad fa-file-alt"
+                                                                                      style="color: skyblue;padding-top: 10"></i></span>English
+                        Time B1 sertifikası
+                    </li>
+                    <li style="color: skyblue;padding-top: 10"><span class="fa-li"><i class="fad fa-file-alt"
+                                                                                      style="color: skyblue;padding-top: 10"></i></span>İUCyber
+                        siber güvenlik Eğitimi
+                    </li>
+                    <li style="color: skyblue;padding-top: 10"><span class="fa-li"><i class="fad fa-file-alt"
+                                                                                      style="color: skyblue;padding-top: 10"></i></span>Udemy
+                        Python eğitimi
+                    </li>
+                </ul>
+            </div>
+            <div id="yd" style="padding-bottom: 30">
+                <h1 style="font-family: 'Roboto Slab', serif; font-size:30px; color:skyblue;padding-top: 50; padding-left: 10;padding-bottom: 20">
+                    Yabancı Dil :</h1>
+                <span style="padding-left: 10 ; padding-top: 20 "><img class="rounded"
+                                                                       src="{% static '/blog/images/Screenshot_3.png' %}"
+                                                                       alt="yabancı dil bilgisi"
+                                                                       style="width: 300;height: 100;"></span>
+            </div>
+        </div>
+
+        <div id="kb" class="col-sm-8 " style="border: 1px solid #292b2c">
+            <div>
+                <h1 style="color: skyblue;text-align: left;padding-top: 60;font-family: 'Merriweather', serif;">UĞUR
+                    BAYRAM</h1>
+            </div>
+            <div>
+                <h4 style="color:burlywood;text-align: left;padding-top: 20;font-family: 'Merriweather', serif;">
+                    Bilgisayar Mühendisiliği Öğrencisi</h4>
+            </div>
+            <div>
+                <h5 style="color:burlywood;text-align: left;padding-top: 10;font-family: 'Merriweather', serif;">
+                    Hakkımda :</h5>
+                <p style="padding-top: 5;color: skyblue">
+                    İstanbul üniversitesi- Cerrahpaşa 3. sınıf Bilgisayar Mühendisliği öğrencisiyim ayrıca Endüstri
+                    Mühendisliği Çift Anadal programında bulunmaktayım.gelişime ve ilerlemeye açığım öğrenmeyi
+                    seviyorum.
+                </p>
+            </div>
+            <div>
+                <h4 style="color:burlywood;text-align: left;padding-top: 10;font-family: 'Merriweather', serif;">
+                    Deneyimlerim : </h4>
+                <h5 style="padding-left: 20;color : chocolate">Stajyer</h5>
+                <h5 style="color: burlywood">BİLGİ TEKNOLOJİLERİ VE İLETİŞİM KURUMU <br> 01/07/2019 - 29/07/2019 </h5>
+                <ul style="list-style: circle;color: cadetblue">
+                    <li>Network temelleri</li>
+                    <li>SDN hakkında teorik ön bilgi</li>
+                    <li>Temel Python uygulamaları</li>
+                    <li>Django ve Web teknolojileri giriş bilgisi</li>
+                </ul>
+            </div>
+            <div id="eb">
+                <h4 style="color:burlywood;text-align: left;padding-top: 10;font-family: 'Merriweather', serif;">Eğitim
+                    : </h4>
+                <h5 style="padding-left: 20;color : chocolate">Bilgisayar Mühendisliği</h5>
+                <h5 style="color: burlywood">İstanbul üniversitesi-Cerrahpaşa<br>16/08/2016 - 01/06/2021 </h5>
+                <ul style="list-style: circle;color: cadetblue">
+                    <li>(Ortalama : 3,58)</li>
+                </ul>
+                <h5 style="padding-left: 20;color : chocolate">Endüstri Mühendisliği - Çift Anadal</h5>
+                <h5 style="color: burlywood">İstanbul üniversitesi-Cerrahpaşa<br>16/08/2019 - 01/06/2022 </h5>
+                <ul style="list-style: circle;color: cadetblue">
+                    <li>(Ortalama : 2,8)</li>
+                </ul>
+            </div>
+            <div id="yb">
+                <h4 style="color:burlywood;text-align: left;padding-top: 10;font-family: 'Merriweather', serif;">
+                    Yetenekler : </h4>
+                <div class="row">
+                    <div class="col-sm-3" style="background-color: skyblue;padding-top: 140">
+                        <div>
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fab fa-python"></i></span>Python</li>
+                                <li><span class="fa-li"><i class="fas fa-copyright"></i></span>C / C++</li>
+                                <li><span class="fa-li"><i class="fas fa-database"></i>s</span>Mysql</li>
+                                <li><span class="fa-li"><i class="fab fa-linux"></i></span>Linux</li>
+                                <li><span class="fa-li"><i class="fab fa-java"></i></span>Java</li>
+                                <li><span class="fa-li"><i class="fab fa-docker"></i></span>Docker</li>
+                                <li><span class="fa-li"><i class="fas fa-user-shield"></i></span>Docker</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-9" style="background-color:azure;">
+                        <div class="">
+                            <img class="center" src="{% static '/blog/images/Screenshot_2.png' %}"
+                                 style="width: 400;height: 400">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
